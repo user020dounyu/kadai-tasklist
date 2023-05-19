@@ -9,9 +9,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity //テーブル構造
+//一覧表示するデータを取得するためのJPQL
+@NamedQueries({
+    @NamedQuery(
+        name = "getAllTasks", //引数の指定
+        query = "SELECT t FROM Task AS t ORDER BY t.id DESC"
+    )
+})
 @Table(name = "tasks") //tasksテーブルを指定
 public class Task {
 
