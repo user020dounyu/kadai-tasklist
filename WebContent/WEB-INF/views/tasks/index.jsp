@@ -14,7 +14,7 @@
         <ul>
             <c:forEach var = "task" items = "${tasks}"> <!-- taskの数だけ -->
                 <li>
-                    <a href = "${pageContext.request.contextPath}/show?id = ${task.id}"> <!-- パス指定 -->
+                    <a href = "${pageContext.request.contextPath}/show?id=${task.id}"> <!-- パス指定 -->
                         <c:out value = "${task.id}" /> <!-- id出力 -->
                     </a>
                     ：<c:out value = "${task.title}"></c:out> &gt; <c:out value = "${task.content}" /> <!-- title,content出力 -->

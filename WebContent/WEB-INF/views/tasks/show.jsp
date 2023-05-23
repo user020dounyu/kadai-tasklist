@@ -14,7 +14,7 @@
                             <td><c:out value="${task.title}" /></td> <!-- title出力 -->
                         </tr>
                         <tr>
-                            <th>メッセージ</th>
+                            <th>タスク</th>
                             <td><c:out value="${task.content}" /></td> <!-- content出力 -->
                         </tr>
                         <tr>
